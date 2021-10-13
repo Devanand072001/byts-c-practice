@@ -9,7 +9,7 @@
 #include <stdio.h>
 int main()
 {
-   int num = 6;
+   int num = 7;
    int coef = 1;
    for (int i = 0; i < num; i++)
    {
@@ -19,12 +19,13 @@ int main()
       }
       for (int j = 0; j <= i; j++)
       {
-         if (j == 0 || i == 0)
+         if (j == 0)
             coef = 1;
          else
+         {
             coef = coef * (i - j + 1) / j;
-
-         printf("% 4d", coef);
+         }
+         printf("%4d", coef);
       }
       printf("\n");
    }
